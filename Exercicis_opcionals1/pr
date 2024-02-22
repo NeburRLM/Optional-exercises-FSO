@@ -1,0 +1,15 @@
+#!/bin/bash
+
+num1=$1
+num2=$2
+num3=$3
+num4=$4
+
+distros=($num1 $num2 $num3 $num4)
+echo "${distros[@]}"
+n=($(printf '%s\n' "${distros[@]}" | sort -n ))
+echo "${n[@]}"
+n=($(printf '%s\n' "${distros[@]}" | sort -n | tail -1))
+echo "${n[@]}"
+
+
